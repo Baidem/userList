@@ -35,6 +35,6 @@ Premier sujet : faire une base d'utilisateur
 - Roadmap.md                : Les objectifs pédagogiques        
 - journal.md                : Rapport journalier, TODO list...
 - Git push                  : commit = Init project
-- Faire un post linkedin    : épisode 2 "Premier Client"
+- Faire un post linkedin    : épisode 1 "Premier Client"
 
 
