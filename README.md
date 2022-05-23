@@ -13,6 +13,7 @@ Un utilisateur doit avoir comme propriétés :
 - date d'entrée
 - email
 - téléphone
+- adresse
 
 
 
