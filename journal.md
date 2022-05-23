@@ -1,7 +1,7 @@
 ### 23/05/2022
 Premier sujet : faire une base d'utilisateur
 ## TODO
-- créer un projet github
+- Créer un projet github
     - Repository name   : userList
     - Description       : User list manager
     - Public ou Private : Public
@@ -11,8 +11,8 @@ Premier sujet : faire une base d'utilisateur
     - Rédiger le Readme : Besoins client
     - Màj gitignore     : ok
     - importer projet   : git clone 
-- créer un projet maven
-    - spring initializr (https://start.spring.io/)
+- Créer un projet maven
+    - Spring initializr (https://start.spring.io/)
         - Project           : Maven Project
         - Language          : Java
         - Spring Boot       : 2.7.0
@@ -29,9 +29,9 @@ Premier sujet : faire une base d'utilisateur
             - Spring Data JPA
             - H2 Database
         - Generate          : CTRL + entrée
-        - télécharger .zip  : ok
+        - Télécharger .zip  : ok
     - Extraction de userList.zip
-        : Fichiers déposés dans le répertoire du projet, je garde le fichier gitignore fait précédemment qui est plus complet.
+        : Fichiers déposés dans le répertoire local du projet, je garde le fichier gitignore fait précédemment qui est plus complet.
 - Roadmap.md                : Les objectifs pédagogiques        
 - journal.md                : Rapport journalier, TODO list...
 - Git push                  : commit = Init project
