@@ -44,15 +44,22 @@ Premier sujet : faire une base d'utilisateur
 Débuter le projet
 ## TODO
 - UML
-    - Diagramme utilisateur
-    - Diagramme de class
+    - Diagramme utilisateur : ok
+    - Diagramme de class : ok
 - Backlog
-    - Users stories
-    - Valeur, technique, effort et risque
-    - Priorités
-    - Sprint
+    - Users stories : ok
+    - Priorités : ok
+    - Sprint : priorité 0
+- Git
+    - Importation du projet sur Eclipse : ok
+    - Créer branches dev et model
 - Code
     - Modeles
+
+### 24/05/2022
+Débuter le projet
+## TODO
+- Code
     - Repositories
     - DTO
     - Controllers
