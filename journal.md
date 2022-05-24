@@ -54,9 +54,9 @@ Débuter le projet
     - Importation du projet sur Eclipse : ok
     - Créer branches dev et model
 - Code
-    - pom.xml : ajout dépendance de mysql-connector-java
+    - pom.xml : ajout dépendance de mysql-connector-java, javax.validation
     - application.properties : ajout config mysql et hibernate
-    - Modeles : class Administrator
+    - Models : class Administrator
 
 # 
 
