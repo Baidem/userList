@@ -54,9 +54,13 @@ Débuter le projet
     - Importation du projet sur Eclipse : ok
     - Créer branches dev et model
 - Code
-    - Modeles
+    - pom.xml : ajout dépendance de mysql-connector-java
+    - application.properties : ajout config mysql et hibernate
+    - Modeles : class Administrator
 
-### 24/05/2022
+# 
+
+### 25/05/2022
 Débuter le projet
 ## TODO
 - Code
