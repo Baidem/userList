@@ -1,3 +1,4 @@
+#
 ### 23/05/2022
 Premier sujet : faire une base d'utilisateur
 ## TODO
@@ -35,6 +36,28 @@ Premier sujet : faire une base d'utilisateur
 - Roadmap.md                : Les objectifs pédagogiques        
 - journal.md                : Rapport journalier, TODO list...
 - Git push                  : commit = Init project
-- Faire un post linkedin    : épisode 2 "Premier Client"
+- Faire un post linkedin    : épisode 1 "Premier Client"
+
+#
+
+### 24/05/2022
+Débuter le projet
+## TODO
+- UML
+    - Diagramme utilisateur
+    - Diagramme de class
+- Backlog
+    - Users stories
+    - Valeur, technique, effort et risque
+    - Priorités
+    - Sprint
+- Code
+    - Modeles
+    - Repositories
+    - DTO
+    - Controllers
+    - Tests
+    - Exceptions
+    - Loggers
 
 
