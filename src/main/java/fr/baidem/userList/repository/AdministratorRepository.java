@@ -1,4 +1,4 @@
-package reporitory;
+package fr.baidem.userList.repository;
 
 import java.util.Optional;
 

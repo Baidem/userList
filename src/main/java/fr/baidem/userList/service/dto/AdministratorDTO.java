@@ -1,4 +1,4 @@
-package dto;
+package fr.baidem.userList.service.dto;
 
 public class AdministratorDTO {
 	
