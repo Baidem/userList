@@ -56,7 +56,11 @@ Débuter le projet
 - Code
     - pom.xml : ajout dépendance de mysql-connector-java, javax.validation
     - application.properties : ajout config mysql et hibernate
-    - Models : class Administrator
+    - Model class Administrator : création, table , constructeur, getter setter
+    
+_NOTE : On utilise pour cela l'attribut fetch, défini sur les annotations @OneToOne, @OneToMany, @ManyToOne et @ManyToMany. Cet attribut peut prendre deux valeurs :_
+- _FetchType.LAZY : indique que la relation doit être chargée à la demande ;_
+- _FetchType.EAGER : indique que la relation doit être chargée en même temps que l'entité qui la porte._
 
 # 
 
@@ -64,6 +68,8 @@ Débuter le projet
 Débuter le projet
 ## TODO
 - Code
+	- Repository Administrator
+	
     - Repositories
     - DTO
     - Controllers
