@@ -68,8 +68,16 @@ _NOTE : On utilise pour cela l'attribut fetch, défini sur les annotations @OneT
 Débuter le projet
 ## TODO
 - Code
-	- Repository Administrator : ok
-	
+	- AdministratorRepository : ok
+	- AdministratorDTO : ok
+
+# 
+
+### 26/05/2022
+Débuter le projet
+## TODO	
+
+- Code
     - Repositories
     - DTO
     - Controllers
