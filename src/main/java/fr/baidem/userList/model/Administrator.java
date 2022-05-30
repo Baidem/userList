@@ -19,7 +19,7 @@ public class Administrator {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name="Name", length=150)
+	@Column(name="name", length=150)
 	@NotBlank
 	private String name;
 	
