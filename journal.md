@@ -65,7 +65,7 @@ _NOTE : On utilise pour cela l'attribut fetch, défini sur les annotations @OneT
 # 
 
 ### 25/05/2022
-Débuter le projet
+Administrator
 ## TODO
 - Code
 	- AdministratorRepository : ok
@@ -73,10 +73,17 @@ Débuter le projet
 
 # 
 
-### 26/05/2022
+### 30/05/2022
 Débuter le projet
-## TODO	
+## TODO
+- Code
+	- Model : User.java : ok
 
+# 
+
+### /2022
+Débuter le projet
+## TODO
 - Code
     - Repositories
     - DTO
