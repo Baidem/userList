@@ -1,10 +1,8 @@
-package fr.baidem.userList.service;
+package fr.baidem.userList.service.dto;
 
 import java.time.LocalDate;
 
-import fr.baidem.userList.model.Administrator;
 import fr.baidem.userList.model.User;
-import fr.baidem.userList.service.dto.AdministratorDTO;
 
 
 public class UserDTO {
@@ -19,8 +17,7 @@ public class UserDTO {
 	
 	public UserDTO() {	}
 
-	public UserDTO(String firstName, String lastName, LocalDate birthday, String email, String phone, String address,
-			Long adminId) {
+	public UserDTO(String firstName, String lastName, LocalDate birthday, String email, String phone, String address, Long adminId) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.birthday = birthday;
@@ -94,8 +91,4 @@ public class UserDTO {
 
 	 	return userDTO;
 	}
-	
-	
-
-
 }
