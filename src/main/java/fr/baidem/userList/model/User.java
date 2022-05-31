@@ -25,8 +25,8 @@ public class User {
 	@Column(name="birthday", length=150)
 	private LocalDate birthday;
 	
-	@Column(name="email", length=150, unique = true)
-	
+	@Column(name="email", length=150, unique = true, nullable = false)
+	@NotBlank
 	@Email
 	private String email;
 
