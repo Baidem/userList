@@ -5,11 +5,11 @@ import fr.baidem.userList.model.Administrator;
 
 public class AdministratorDTO {
 	
-	public String name;
-	public String password;
+	private Long id;
+	private String name;
+	private String password;
 
-	public AdministratorDTO() {
-	}
+	public AdministratorDTO() {	}
 
 	public AdministratorDTO(String name) {
 		this.name = name;
@@ -42,6 +42,11 @@ public class AdministratorDTO {
 
         return administratorDTO;
     }
+	
+	public Long getId(Administrator administrator) {
+		id = administrator.getId();
+		return id;
+	}
 	
 
 }
