@@ -74,18 +74,23 @@ Administrator
 # 
 
 ### 30/05/2022
-Débuter le projet
+User
 ## TODO
 - Code
 	- Model : User.java : ok
 
 # 
 
-### /2022
-Débuter le projet
+### 31/05/2022
+User
 ## TODO
 - Code
-    - Repositories
+    - Repository : UserRepository.java : ok
+    - DTO : UserDTO.java AdministratorDTO.java : ok
+       
+    
+    
+    
     - DTO
     - Controllers
     - Tests
