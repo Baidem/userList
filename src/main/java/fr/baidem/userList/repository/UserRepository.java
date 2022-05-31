@@ -10,10 +10,10 @@ public interface UserRepository  extends JpaRepository<User, Long> {
 	
 	public List<User> findAll();
 	
-	public List<User> findBy_firstName();
+	public List<User> findByFirstName(String firstName);
 	
-	public List<User> findBy_lastName();
+	public List<User> findByLastName(String lastName);
 	
-	public List<User> findBy_administrator();
+	public List<User> findByAdministrator_administratorId(Long id);
 	
 }
