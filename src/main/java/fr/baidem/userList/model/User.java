@@ -26,6 +26,9 @@ public class User {
 	@Column(name="birthday", length=150)
 	private LocalDate birthday;
 	
+	@Column(name="enterDate", length=150)
+	private LocalDate enterDate;
+	
 	@Column(name="email", length=150, unique = true, nullable = false)
 	@NotBlank
 	@Email
@@ -49,12 +52,14 @@ public class User {
 		this.lastName = lastName;
 	}
 
-	public User(String firstName, String lastName, LocalDate birthday, String email, String phone, String address) {
+	public User(String firstName, String lastName, LocalDate birthday, LocalDate enterDate,String email, String phone, String address, Administrator administrator) {
 		this(firstName, lastName);
 		this.birthday = birthday;
+		this.enterDate = enterDate;
 		this.email = email;
 		this.phone = phone;
 		this.address = address;
+		this.administrator = administrator;
 	}
 
 	public Long getId() {
@@ -119,6 +124,14 @@ public class User {
 
 	public void setAdministrator(Administrator administrator) {
 		this.administrator = administrator;
+	}
+
+	public LocalDate getEnterdate() {
+		return enterDate;
+	}
+
+	public void setEnterdate(LocalDate enterdate) {
+		this.enterDate = enterdate;
 	}
 	
 	
