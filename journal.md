@@ -92,14 +92,19 @@ User
 # 
 
 ### 01/06/2022
-User
+User + Controller
 ## TODO
 - Code
 	- Model : User.java : fix bug : constructor parameters : OK
 	- Repository : UserRepository.java	 : add : @Query methods : OK
-	- Service : UserService.java : CRUD methods : OK  
+	- Service : UserService.java : CRUD methods : OK
+	- Controller : UserController.java : OK
+	- Controller : AdministratorController.java : OK
+ 	
     
-#     
+    
+#   
+  
     - DTO
     - Controllers
     - Tests
