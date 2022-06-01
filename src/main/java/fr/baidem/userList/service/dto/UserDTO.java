@@ -10,6 +10,7 @@ public class UserDTO {
 	private String firstName;
 	private String lastName;
 	private LocalDate birthday;
+	private LocalDate enterDate;
 	private String email;
 	private String phone;
 	private String address;
@@ -17,10 +18,11 @@ public class UserDTO {
 	
 	public UserDTO() {	}
 
-	public UserDTO(String firstName, String lastName, LocalDate birthday, String email, String phone, String address, Long adminId) {
+	public UserDTO(String firstName, String lastName, LocalDate birthday,LocalDate enterDate, String email, String phone, String address, Long adminId) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.birthday = birthday;
+		this.enterDate = enterDate;
 		this.email = email;
 		this.phone = phone;
 		this.address = address;
@@ -83,11 +85,19 @@ public class UserDTO {
 		this.adminId = adminId;
 	}
 	
+	public LocalDate getEnterDate() {
+		return enterDate;
+	}
+
+	public void setEnterDate(LocalDate enterDate) {
+		this.enterDate = enterDate;
+	}
+
 	public UserDTO copyUser(User user){
 		AdministratorDTO administratorDto = new AdministratorDTO();
 	 	Long administratorId = administratorDto.getId(user.getAdministrator());
 	        
-	 	UserDTO userDTO = new UserDTO(user.getFirstName(), user.getLastName(), user.getBirthday(), user.getEmail(), user.getPhone(), user.getAddress(), administratorId);
+	 	UserDTO userDTO = new UserDTO(user.getFirstName(), user.getLastName(), user.getBirthday(), user.getEnterdate(), user.getEmail(), user.getPhone(), user.getAddress(), administratorId);
 
 	 	return userDTO;
 	}
