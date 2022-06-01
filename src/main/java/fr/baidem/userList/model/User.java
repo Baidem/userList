@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
+
 @Entity
 @Table(name = "users")
 
@@ -48,7 +49,8 @@ public class User {
 		this.lastName = lastName;
 	}
 
-	public User(LocalDate birthday, @Email String email, String phone, String address) {
+	public User(String firstName, String lastName, LocalDate birthday, String email, String phone, String address) {
+		this(firstName, lastName);
 		this.birthday = birthday;
 		this.email = email;
 		this.phone = phone;
