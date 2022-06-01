@@ -29,7 +29,7 @@ public interface UserRepository  extends JpaRepository<User, Long> {
 	List<User> findByEnterDateAndAdminId(LocalDate enterDate, Long id);
 	
 	@Query("select u from User u where u.email= :email and u.administrator= :id")
-	List<User> findByEmailAndAdminId(String email, Long id);
+	User findByEmailAndAdminId(String email, Long id);
 
 	@Query("select u from User u where u.phone= :phone and u.administrator= :id")
 	List<User> findByPhoneAndAdminId(String phone, Long id);
