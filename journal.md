@@ -1,4 +1,4 @@
-#
+# 
 ### 23/05/2022
 Premier sujet : faire une base d'utilisateur
 ## TODO
@@ -8,9 +8,9 @@ Premier sujet : faire une base d'utilisateur
     - Public ou Private : Public
     - Add a README file : yes
     - Licence           : MIT
-    - Créer le projet   : ok
+    - Créer le projet   : OK
     - Rédiger le Readme : Besoins client
-    - Màj gitignore     : ok
+    - Màj gitignore     : OK
     - importer projet   : git clone 
 - Créer un projet maven
     - Spring initializr (https://start.spring.io/)
@@ -30,7 +30,7 @@ Premier sujet : faire une base d'utilisateur
             - Spring Data JPA
             - H2 Database
         - Generate          : CTRL + entrée
-        - Télécharger .zip  : ok
+        - Télécharger .zip  : OK
     - Extraction de userList.zip
         : Fichiers déposés dans le répertoire local du projet, je garde le fichier gitignore fait précédemment qui est plus complet.
 - Roadmap.md                : Les objectifs pédagogiques        
@@ -38,20 +38,20 @@ Premier sujet : faire une base d'utilisateur
 - Git push                  : commit = Init project
 - Faire un post linkedin    : épisode 1 "Premier Client"
 
-#
+# 
 
 ### 24/05/2022
 Débuter le projet
 ## TODO
 - UML
-    - Diagramme utilisateur : ok
-    - Diagramme de class : ok
+    - Diagramme utilisateur : OK
+    - Diagramme de class : OK
 - Backlog
-    - Users stories : ok
-    - Priorités : ok
+    - Users stories : OK
+    - Priorités : OK
     - Sprint : priorité 0
 - Git
-    - Importation du projet sur Eclipse : ok
+    - Importation du projet sur Eclipse : OK
     - Créer branches dev et model
 - Code
     - pom.xml : ajout dépendance de mysql-connector-java, javax.validation
@@ -62,23 +62,44 @@ _NOTE : On utilise pour cela l'attribut fetch, défini sur les annotations @OneT
 - _FetchType.LAZY : indique que la relation doit être chargée à la demande ;_
 - _FetchType.EAGER : indique que la relation doit être chargée en même temps que l'entité qui la porte._
 
-# 
+#  
 
 ### 25/05/2022
-Débuter le projet
+Administrator
 ## TODO
 - Code
-	- AdministratorRepository : ok
-	- AdministratorDTO : ok
+	- AdministratorRepository : OK
+	- AdministratorDTO : OK
 
 # 
 
-### 26/05/2022
-Débuter le projet
-## TODO	
-
+### 30/05/2022
+User
+## TODO
 - Code
-    - Repositories
+	- Model : User.java : OK
+
+# 
+
+### 31/05/2022
+User
+## TODO
+- Code
+    - Repository : UserRepository.java : OK
+    - DTO : UserDTO.java AdministratorDTO.java : OK
+    - Repository : fix bug : UserRepository.java : OK
+       
+# 
+
+### 01/06/2022
+User
+## TODO
+- Code
+	- Model : User.java : fix bug : constructor parameters : OK
+	- Repository : UserRepository.java	 : add : @Query methods : OK
+	- Service : UserService.java : CRUD methods : OK  
+    
+#     
     - DTO
     - Controllers
     - Tests
