@@ -36,12 +36,12 @@ public class AdministratorController {
 	public ResponseEntity<?> getAdministrators(){
 		try {
 			List<Administrator> administretors = administratorService.findAll();
-			List<AdministratorDTO> administratorDTOS=new LinkedList<AdministratorDTO>();
-			AdministratorDTO administratorDTO=new AdministratorDTO();
+			List<AdministratorDTO> administratorDTOs = new LinkedList<AdministratorDTO>();
+			AdministratorDTO administratorDTO = new AdministratorDTO();
 			for(Administrator administrator:administretors){
-				administratorDTOS.add(administratorDTO.copyAdministrator(administrator));
+				administratorDTOs.add(administratorDTO.copyAdministrator(administrator));
 			}
-			return new ResponseEntity<>(administratorDTOS, HttpStatus.OK);
+			return new ResponseEntity<>(administratorDTOs, HttpStatus.OK);
 		} catch (Exception e){
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
@@ -55,10 +55,10 @@ public class AdministratorController {
 			if(findAdministrator == null){
 				return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 			}
-			AdministratorDTO administratorDTO=new AdministratorDTO();
+			AdministratorDTO administratorDTO = new AdministratorDTO();
 			return new ResponseEntity<> (administratorDTO.copyAdministrator(findAdministrator), HttpStatus.OK);
 		} catch (Exception e) {
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Administrator not found");
 		}
 	}
 	
@@ -67,7 +67,7 @@ public class AdministratorController {
 
 		try{
 			Administrator createdAdministrator = administratorService.createAdministrator(administratorDTO.getName(), administratorDTO.getPassword());
-			AdministratorDTO administratorDTO1=new AdministratorDTO();
+			AdministratorDTO administratorDTO1 = new AdministratorDTO();
 			return new ResponseEntity<Object>(administratorDTO1.copyAdministrator(createdAdministrator), HttpStatus.CREATED);
 		} catch (Exception e) {
 			e.printStackTrace();
