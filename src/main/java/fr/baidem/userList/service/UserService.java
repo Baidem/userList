@@ -23,6 +23,10 @@ public class UserService {
 		this.administratorService = administratorService;
 	}
 	
+	public List<User> findAll() {
+		return userRepository.findAll();
+	}
+	
 	public User getUserById(Long id) {
 		return userRepository.getById(id);
 	}
