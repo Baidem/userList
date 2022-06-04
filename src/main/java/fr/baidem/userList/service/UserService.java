@@ -69,7 +69,7 @@ public class UserService {
 	public boolean existId(Long id) {
 		List<User> users=this.userRepository.findAll();
 		for(User user:users){
-			if(user.getId()==id){
+			if(user.getId() == id){
 				return true;
 			}
 		}
