@@ -33,7 +33,7 @@ public class AdministratorService {
 	public boolean existId(Long id) {
 		List<Administrator> administrators = this.administratorRepository.findAll();
 		for(Administrator administrator:administrators) {
-			if(administrator.getId() == id){
+			if(administrator.getId().equals(id)){
 				return true;
 			}
 		}
@@ -52,22 +52,24 @@ public class AdministratorService {
 			}
 		if (this.findByName(name) != null) { 
 			return this.findByName(name);
-			}
-		
+			}	
 		Administrator administrator = new Administrator(name, password);
-		
 		administrator = this.administratorRepository.save(administrator);
 		return administrator;
 	}
 	
 	@Transactional
 	public void updateAdministrator(Long id, String name, String password) {
+		System.out.println("==> id " + id + " name " + name + " password " + password);
+
 		if (name != null && this.existId(id)) {
+			System.out.println(name + " && " + this.existId(id));
 			Administrator a = this.findByName(name);
 			if (a == null || a.getId() == id) {
 				Administrator administrator = this.getById(id);
 				administrator.setName(name);
 				administrator.setPassword(password);
+				System.out.println("name " + name + " password " + password);
 				administrator = this.administratorRepository.save(administrator);	
 			}		
 		}
@@ -75,9 +77,11 @@ public class AdministratorService {
 	
 	@Transactional
 	public void deleteAdministrator(Long id) {
-		Administrator administrator = this.getById(id);
-		if (administrator != null) {
-			this.administratorRepository.delete(administrator);
+		if (this.existId(id)) {
+			Administrator administrator = this.getById(id);
+			if (administrator != null) {
+				this.administratorRepository.delete(administrator);
+			}			
 		}
 	}
 }
