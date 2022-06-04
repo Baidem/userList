@@ -101,7 +101,27 @@ User + Controller
 	- Controller : UserController.java : OK
 	- Controller : AdministratorController.java : OK
  	
-    
+ 
+# 
+
+### 02/06/2022
+Test
+## TODO
+- Code
+	- Test : UserServiceTest.java : in progress
+	- Test : AdministratorServiceTest.java : in progress
+	
+	
+# 
+
+### 04/06/2022
+Test
+## TODO
+- Code
+	- Test : AdministratorServiceTest.java : createAdministrator() : OK
+	- Test : AdministratorServiceTest.java : updateAdministrator() : OK
+	- Test : AdministratorServiceTest.java : deleteAdministrator() : OK
+	-
     
 #   
   
