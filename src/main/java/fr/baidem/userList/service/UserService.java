@@ -76,19 +76,41 @@ public class UserService {
 		return false;
 	}
 	
+	public boolean existEmailForThisAdmin(String email, Long adminId) {
+		System.out.println("****** existEmailForThisAdmin : run");
+		User user = null;
+		user = this.userRepository.findByEmailAndAdminId(email, adminId);
+		if (user == null) {
+			System.out.println("****** findByEmailAndAdminId : false");
+			return false;
+		}
+		System.out.println("****** findByEmailAndAdminId : true");
+		return true;
+	}
+	
 	public User findByUserEmail(String email, Long adminId) {
+		if (!this.existId(adminId)) {
+			return null;
+		} 
 		return this.findAdminUsersByEmail(email, adminId);
 	}
 	
 	@Transactional
 	public User createUser(String firstName, String lastName, LocalDate birthday, LocalDate enterDate,String email, String phone, String address, Long adminId) {
-		if (email == null){ 
+		System.out.println("****** creatUser : run");
+		if (email.equals(null)){ 
 			return null; 
-			}
-		if (this.findByUserEmail(email, adminId) != null) { 
-			return this.findByUserEmail(email, adminId); 
-			}
-		Administrator administrator = administratorService.getById(adminId);
+		} 
+		else 
+			if (existEmailForThisAdmin(email, adminId)) { 
+				System.out.println("******* exist email!!!");
+			return null; 
+		} 
+//			else 
+//			if (!this.administratorService.existId(adminId)) {
+//			return null;
+//		}
+		Administrator administrator = this.administratorService.getById(adminId);
 		User user = new User(firstName, lastName, birthday, enterDate, email, phone, address, administrator);
 		
 		user = this.userRepository.save(user);
@@ -108,6 +130,7 @@ public class UserService {
 				user.setEmail(email);
 				user.setPhone(phone);
 				user.setAddress(address);
+				user.setId(adminId);
 				user = this.userRepository.save(user);	
 			}		
 		}
