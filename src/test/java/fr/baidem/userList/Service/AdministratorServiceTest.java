@@ -22,7 +22,7 @@ import fr.baidem.userList.service.AdministratorService;
 @SpringBootTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @DisplayName("Test : class AdministratorService")
-class AdministratorSerciceTest {
+class AdministratorServiceTest {
 	@Autowired
     AdministratorService administratorService;
 	
@@ -31,6 +31,8 @@ class AdministratorSerciceTest {
 	
 	
     private List<Administrator> administrators = new ArrayList<Administrator>();
+    private List<Administrator> adminsAfterDelete = new ArrayList<Administrator>();
+
     private List<Long> adminsIdAfterDelete = new ArrayList<Long>();
     
 
@@ -43,21 +45,17 @@ class AdministratorSerciceTest {
     	for(int i = 0; i<3; i++) {
     		Administrator adminRandom = easyRandom.nextObject(Administrator.class);
     		adminRandom = this.administratorRepository.save(adminRandom);
-    		adminsIdAfterDelete.add(adminRandom.getId());
+    		//adminsIdAfterDelete.add(adminRandom.getId());
+    		adminsAfterDelete.add(adminRandom);
     	}
-    	System.out.print("==> adminRandom id : ");
-    	for (Long id : adminsIdAfterDelete) {
-			System.out.print(id + ", ");
-		}
-    	System.out.println("");
 	}
     
     
     @AfterAll
 	public void destruct() {
     	System.out.println("@AfterEach");
-    	for (Long adminId : adminsIdAfterDelete) {
-    		this.administratorService.deleteAdministrator(adminId);			
+    	for (Administrator admin : adminsAfterDelete) {
+    		this.administratorRepository.delete(admin);			
 		}
 	}
     
@@ -66,12 +64,12 @@ class AdministratorSerciceTest {
 	void testFindAll() {
 		System.out.println("Test : findAll()");
     	int sizeA = -1;
-    	assertNotNull(this.administratorService.findAll(), "Message : assertNotNull(this.administratorService.findAll() is null)");
+    	assertNotNull(this.administratorService.findAll(), "Message : assertNotNull(this.administratorService.findAll()) is null");
     	sizeA = this.administratorService.findAll().size();
     	assertTrue(sizeA > -1, "Message : assertTrue(sizeA > -1) is false");
-    	Administrator adminTestFindAll = new Administrator("nameTestFindAll", "pw");
+    	Administrator adminTestFindAll = new Administrator("nameTestFindAll", "123456");
     	adminTestFindAll = this.administratorRepository.save(adminTestFindAll);
-    	adminsIdAfterDelete.add(adminTestFindAll.getId());
+    	adminsAfterDelete.add(adminTestFindAll);
     	int sizeB = this.administratorService.findAll().size();
     	assertEquals(sizeB - sizeA, 1, "Message : assertEquals(sizeB - sizeA, 1) is false");
 	}
@@ -80,8 +78,28 @@ class AdministratorSerciceTest {
 	@DisplayName("Test : findByName()")
 	void testFindByName() {
 		System.out.println("Test : findByName()");
-    	
+    	Administrator adminTestFindByName = new Administrator("nameTestFindByName", "123456");
+		adminTestFindByName = this.administratorRepository.save(adminTestFindByName);
+    	adminsAfterDelete.add(adminTestFindByName);
+    	assertNotNull(adminTestFindByName, "Message : assertNotNull(adminTestFindByName) is null");
+    	assertEquals(adminTestFindByName.getName(), "nameTestFindByName", "Message : assertEquals(adminTestFindByName.getName(), \"nameTestFindByName\") is false");
 	}
+    
+    @Test
+	@DisplayName("Test : existId()")
+	void testExistId() {
+		System.out.println("Test : existId()");
+    	Administrator adminTestExistId = new Administrator("nameTestExistId", "123456");
+		adminTestExistId = this.administratorRepository.save(adminTestExistId);
+    	assertNotNull(adminTestExistId, "Message : assertNotNull(adminTestExistId) is null");
+    	Long id = adminTestExistId.getId();
+    	assertTrue(this.administratorService.existId(id), "Message : assertTrue(this.administratorService.existId(id)) is false");
+    	this.administratorRepository.delete(adminTestExistId);
+    	assertNull(adminTestExistId, "Message : assertNull(adminTestExistId) is not null");
+    	assertFalse(this.administratorService.existId(id), "Message : assertTrue(this.administratorService.existId(id)) is true");
+    }
+    
+    
     
 	
 //	@Test
