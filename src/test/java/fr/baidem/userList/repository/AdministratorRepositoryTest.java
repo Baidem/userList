@@ -38,8 +38,8 @@ class AdministratorRepositoryTest {
     }
 	
 	@Test
-	public void saveTest() {
-    	System.out.println("Test : saveTest()");
+	public void testSave() {
+    	System.out.println("Test : save()");
 		Administrator administrator01 = new Administrator("saveTest", "123456");
 		administrator01 = this.administratorRepository.save(administrator01);
 		adminsForDelete.add(administrator01);
@@ -47,8 +47,8 @@ class AdministratorRepositoryTest {
 	}
 	
 	@Test
-	public void findAllTest() {
-    	System.out.println("Test : findAllTest()");
+	public void testFindAll() {
+    	System.out.println("Test : findAll()");
     	List<Administrator> administrators = new ArrayList<Administrator>();
     	int sizeA =  this.administratorRepository.findAll().size();
 		Administrator administrator02 = new Administrator("findAllTest", "123456");
@@ -60,25 +60,25 @@ class AdministratorRepositoryTest {
 	}
 	
 	@Test
-	public void findByNameTest() {
-		System.out.println("Test : findByNameTest()");
+	public void testFindByName() {
+		System.out.println("Test : findByName()");
 		Administrator administrator03 = new Administrator("findByNameTest", "123456");
 		administrator03 = this.administratorRepository.save(administrator03);
 		adminsForDelete.add(administrator03);
 		Administrator adminFinded = this.administratorRepository.findByName("findByNameTest");
-		System.out.println(adminFinded.getId());
+		//System.out.println(adminFinded.getId());
 		assertNotNull(adminFinded, "Message : assertNotNull(adminFinded) is null");
 	}
 	
 	@Test
-	public void deleteTest() {
-		System.out.println("Test : deleteTest()");
+	public void testDelete() {
+		System.out.println("Test : delete()");
 		Administrator administrator04 = new Administrator("deleteTest", "123456");
 		administrator04 = this.administratorRepository.save(administrator04);
 		int sizeA = this.administratorRepository.findAll().size();
 		administratorRepository.delete(administrator04);
 		int sizeB = this.administratorRepository.findAll().size();
-		System.out.println(sizeB - sizeA);
+		//System.out.println(sizeB - sizeA);
 		assertEquals(sizeB - sizeA, -1, "Message : assertEquals(sizeB - sizeA, -1) is false");
 	}
 	
