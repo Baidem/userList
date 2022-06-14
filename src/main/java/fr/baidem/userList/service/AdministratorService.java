@@ -26,7 +26,7 @@ public class AdministratorService {
 	public Administrator findByName(String name) {
 		if(name == null) {
 			return null;	
-			}
+		}
 		return this.administratorRepository.findByName(name);
 	}
 	
