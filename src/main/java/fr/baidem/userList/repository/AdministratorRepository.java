@@ -13,5 +13,5 @@ public interface AdministratorRepository extends JpaRepository<Administrator, Lo
 	public List<Administrator> findAll();
 	
 	Administrator findByName(String name);
-		
+			
 }
