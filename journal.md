@@ -125,6 +125,34 @@ Test
     
 #   
   
+### 05/06 -> 14/06/2022
+Test
+## TODO
+- Code
+	- Test : AdministratorRepositoryTest.java : testSave() : OK
+	- Test : AdministratorRepositoryTest.java : testFindAll() : OK
+	- Test : AdministratorRepositoryTest.java : testFindByName() : OK
+	- Test : AdministratorRepositoryTest.java : testDelete() : OK
+
+	- Test : AdministratorServiceTest.java : testFindByName() : OK
+	- Test : AdministratorServiceTest.java : testExistId() : OK
+	- Test : AdministratorServiceTest.java : testFindAll() : OK
+	- Test : AdministratorServiceTest.java : testGetById() : OK
+	- Test : AdministratorServiceTest.java : testCreateAdministrator() : OK
+	- Test : AdministratorServiceTest.java : testUpdateUser() : OK
+	- Test : AdministratorServiceTest.java : testDeleteAdministrator() : OK
+	
+	- Service : AdminitratorService.java : update : OK
+	- Service : AdministratorRepository.java : update : OK
+	
+    
+#   
+    
+    
+    
+    
+    
+    
     - DTO
     - Controllers
     - Tests
